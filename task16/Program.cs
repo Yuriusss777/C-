@@ -1,16 +1,12 @@
-﻿int firstNumber = new Random().Next(0, 1000);
-Console.WriteLine($"первое число -> {firstNumber}");
-int secondNumber = new Random().Next(0, 1000);
-Console.WriteLine($"второе число -> {secondNumber}");
+﻿Console.WriteLine("введите первое число: ");
+int firstNumber = Convert.ToInt32(Console.ReadLine());
 
-int squareNumber = SquareNumber(firstNumber);
-if(squareNumber == secondNumber)
-Console.WriteLine("-> да");
-else
-Console.WriteLine("нет");
+Console.WriteLine("введите второе число: ");
+int secondNumber = Convert.ToInt32(Console.ReadLine());
+bool squareNumber = SquareNumber(firstNumber, secondNumber);
+Console.WriteLine(squareNumber ? "да" : "нет");
 
-int SquareNumber(int num)
+bool SquareNumber(int num1, int num2)
 {
-    int squareNumber = firstNumber * firstNumber;
-    return squareNumber;
+    return (num1 == num2 * num2) || (num2 == num1 * num1);
 }
