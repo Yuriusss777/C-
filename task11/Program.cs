@@ -5,8 +5,8 @@ int DeleteCenter(int num) // num  = number
 {
     int first = num / 100;
     int third = num % 10;
-    int deleteCenter = first * 10 + third;
-    return deleteCenter;
+    int answer = first * 10 + third;
+    return answer;
 }
 
 Console.WriteLine($"двузначное число = {deleteCenter}");
