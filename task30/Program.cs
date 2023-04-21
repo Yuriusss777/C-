@@ -9,18 +9,19 @@ int lengthArray = Convert.ToInt32(Console.ReadLine());
 // int size = array.Length;
 
 int[] arr = Array(lengthArray);
-PrintArray(arr);
+
 
 int[] Array(int size)
 {
-    int[] array = new int[lengthArray];
+    int[] array = new int[size];
+    Random random = new Random(); // опритмизация объектов random
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(0, 2);
+        array[i] = random.Next (0, 2);
     }
     return array;
-    // Console.WriteLine($"{array[1], 3}");
-}
+   }
+
 void PrintArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
@@ -28,3 +29,6 @@ void PrintArray(int[] array)
         Console.Write($"{array[i]} ");
     }
 }
+Console.Write($"[");
+PrintArray(arr);
+Console.Write($"]");
