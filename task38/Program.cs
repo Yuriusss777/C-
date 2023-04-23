@@ -24,11 +24,11 @@ void PrintArray(double[] arr)
     }
 }
 
-double[] array = CreatArrayRndDouble(7, 1, 1000);
-double minNumber = MinNumber(array);
+
+
 double MinNumber(double[] arr)
 {
-    double min = 999;
+    double min = arr[0];
 
     for (int i = 1; i < arr.Length; i++)
     {
@@ -38,10 +38,10 @@ double MinNumber(double[] arr)
     return min1;
 }
 
-double maxNumber = MaxNumber(array);
+
 double MaxNumber(double[] arr)
 {
-    double max = 0;
+    double max = arr[0];
 
     for (int i = 1; i < arr.Length; i++)
     {
@@ -50,6 +50,10 @@ double MaxNumber(double[] arr)
     double max1 = Math.Round(max, 1);
     return max1;
 }
+
+double[] array = CreatArrayRndDouble(7, 1, 1000);
+double minNumber = MinNumber(array);
+double maxNumber = MaxNumber(array);
 
 Console.Write("[");
 PrintArray(array);
