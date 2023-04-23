@@ -17,6 +17,7 @@ void PrintArray(int[] arr) // метод, который выводит в ко�
         else Console.Write($"{arr[i]}");
     }
 }
+
 int[] array = CreatArrayRndInt(123, 0, 1000);
 int sectionElements = SectionElements(array);
 int SectionElements(int[] arr)
@@ -24,7 +25,7 @@ int SectionElements(int[] arr)
     int sum = 0;
     for (int i = 0; i < arr.Length; i++)
         {
-        if(array[1] >= 10 && array[i] <= 99) sum += 1; 
+        if(array[i] >= 10 && array[i] <= 99) sum += 1; 
     }
     return sum;
 }
