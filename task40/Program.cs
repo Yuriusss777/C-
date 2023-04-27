@@ -7,9 +7,10 @@ int numberC = Convert.ToInt32(Console.ReadLine());
 
 bool IsExistTriangle(int numA, int numB, int numC)
 {
-    if (numA < numB + numC && numB < numA + numC && numC < numA + numB)
-        return true;
-    else return false;
+    // if (numA < numB + numC && numB < numA + numC && numC < numA + numB)
+    return numA < numB + numC && numB < numA + numC && numC < numA + numB;
+    //     return true;
+    // else return false;
 }
 
 bool existTriangle = IsExistTriangle(numberA, numberB, numberC);
