@@ -25,12 +25,12 @@ int[] CreateCopyArray(int[] arr)
     {
         newArr[i] = arr[i];
     }
-    // newArr[newArr.Length - 1] = 10;
-    return newArr;
+        return newArr;
 }
 
 int[] array = CreatArrayRndInt(5, -9, 9);
 PrintArray(array);
 Console.WriteLine();
 int[] newArray = CreateCopyArray(array);
+// newArray[0] = 10; замена конкретного индекса в новом массиве
 PrintArray(newArray);
