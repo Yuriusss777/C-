@@ -19,7 +19,7 @@ int[,] array2d = CreatMatrixRndInt(3, 4, 0, 10);
 Printmatrix(array2d);
 bool matrixElements = MatrixElements(array2d, number1, number2);
 Console.WriteLine();
-Console.Write(matrixElements ? array2d[number1, number2] : "Такого элемента в массиве нет");
+Console.Write(matrixElements ? array2d[number1, number2] : "Такого элемента в массиве нет или ввели отрицательное значение");
 
 
 int[,] CreatMatrixRndInt(int rows, int columns, int min, int max)
@@ -52,9 +52,9 @@ void Printmatrix(int[,] matrix)
 
 bool MatrixElements(int[,] matrix, int number1, int number2)
 {
-    if (number1 < matrix.GetLength(0) && number2 < matrix.GetLength(1))
+    if (number1 < matrix.GetLength(0) && number2 < matrix.GetLength(1) && number1 >=0 && number2 >= 0)
         return true;
-    else
+    else 
         return false;
 }
 
