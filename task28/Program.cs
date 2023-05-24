@@ -13,4 +13,4 @@ int PrNumbers(int num) // int num = number
         pr = pr * i; //sum += i
     }
     return pr;
-}
+    }
