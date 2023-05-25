@@ -12,13 +12,11 @@ int numberM = Convert.ToInt32(Console.ReadLine());
 AkkermanFunction(numberM, numberN);
 
 
-// вызов функции Аккермана
 void AkkermanFunction(int numN, int numM)
 {
     Console.Write(Akkerman(numN, numM));
 }
 
-// функция Аккермана
 int Akkerman(int numN, int numM)
 {
     if (numN == 0)
